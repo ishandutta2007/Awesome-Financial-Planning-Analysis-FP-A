@@ -1,46 +1,61 @@
-# Awesome Financial Planning & Analysis (FP&A) Tools & Software [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+<div align="center">
 
-> A curated directory of top Financial Planning & Analysis (FP&A) SaaS software, Enterprise Performance Management (CPM/EPM) platforms, and open-source GitHub projects for corporate budgeting, rolling forecasts, driver-based financial modeling, variance analysis, and board reporting.
+<img src="./assets/banner.svg" alt="Awesome Financial Planning & Analysis (FP&A) Banner" width="100%" />
 
-**Last updated: October 2026**
+# 📊 Awesome Financial Planning & Analysis (FP&A) 📈
 
----
+<p align="center">
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+<a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-## Table of Contents
+> 💡 *A curated directory of top Financial Planning & Analysis (FP&A) SaaS software, Enterprise Performance Management (CPM/EPM) platforms, and open-source GitHub projects for corporate budgeting, rolling forecasts, driver-based financial modeling, variance analysis, and board reporting.* 💼
 
-- [Overview & What is FP&A?](#overview--what-is-fpa)
-- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
-- [SaaS & Enterprise FP&A Platforms](#saas--enterprise-fpa-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [Key Features of Modern FP&A Software](#key-features-of-modern-fpa-software)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer & License](#disclaimer--license)
+📅 **Last updated: October 2026**
 
----
-
-## Overview & What is FP&A?
-
-Financial Planning & Analysis (FP&A) solutions empower CFOs, finance business partners, controllers, and FP&A analysts to forecast operational revenues, model cost drivers, track budget-vs-actual variances, run scenario simulations, and deliver executive board packs. 
-
-While enterprise finance historically relied on fragile spreadsheet sprawl in Microsoft Excel, modern cloud FP&A and Corporate Performance Management (CPM/EPM) software integrate directly with ERP systems (NetSuite, SAP, Workday, QuickBooks) and CRM databases (Salesforce, HubSpot) to enable governed, auditable, and automated collaborative financial workflows.
+</div>
 
 ---
 
-## Sector Overview & Market Dynamics
+## 📑 Table of Contents
 
-The global Financial Planning and Analysis (FP&A) and Corporate Performance Management (CPM) software market is estimated at **$4.8 billion in 2025 and projected to reach over $5.5–$6.0+ billion by 2026**, expanding at a compound annual growth rate (CAGR) of **~9–10%**.
+- [🔍 Overview & What is FP&A?](#-overview--what-is-fpa)
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [💼 SaaS & Enterprise FP&A Platforms](#-saas--enterprise-fpa-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+- [✨ Key Features of Modern FP&A Software](#-key-features-of-modern-fpa-software)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support](#-support)
+- [⭐ Star History](#-star-history)
+- [⚖️ Disclaimer & License](#️-disclaimer--license)
+
+---
+
+## 🔍 Overview & What is FP&A?
+
+Financial Planning & Analysis (FP&A) solutions empower CFOs, finance business partners, controllers, and FP&A analysts to forecast operational revenues, model cost drivers, track budget-vs-actual variances, run scenario simulations, and deliver executive board packs. 🎯
+
+While enterprise finance historically relied on fragile spreadsheet sprawl in Microsoft Excel, modern cloud FP&A and Corporate Performance Management (CPM/EPM) software integrate directly with ERP systems (NetSuite, SAP, Workday, QuickBooks) and CRM databases (Salesforce, HubSpot) to enable governed, auditable, and automated collaborative financial workflows. ⚡
+
+---
+
+## 🌐 Sector Overview & Market Dynamics
+
+The global Financial Planning and Analysis (FP&A) and Corporate Performance Management (CPM) software market is estimated at **$4.8 billion in 2025 and projected to reach over $5.5–$6.0+ billion by 2026**, expanding at a compound annual growth rate (CAGR) of **~9–10%**. 🚀
 
 The sector exhibits a **hybrid market concentration structure**:
-- **Highly concentrated at the enterprise tier:** Dominated by mega-cap ERP suites and consolidated EPM giants (Workday, Anaplan, OneStream, Oracle EPM, SAP) who capture over two-thirds of total enterprise contract value through large multi-year enterprise commitments.
-- **Moderately fragmented across the mid-market and SMB space:** A vibrant ecosystem of specialized, spreadsheet-native, and cloud-first platforms (Vena, Datarails, Cube, Planful, Mosaic Tech) fiercely compete on native Excel sync, fast deployment times, and AI-assisted narrative variance intelligence.
+- 🏢 **Highly concentrated at the enterprise tier:** Dominated by mega-cap ERP suites and consolidated EPM giants (Workday, Anaplan, OneStream, Oracle EPM, SAP) who capture over two-thirds of total enterprise contract value through large multi-year enterprise commitments.
+- 🧩 **Moderately fragmented across the mid-market and SMB space:** A vibrant ecosystem of specialized, spreadsheet-native, and cloud-first platforms (Vena, Datarails, Cube, Planful, Mosaic Tech) fiercely compete on native Excel sync, fast deployment times, and AI-assisted narrative variance intelligence.
 
 ---
 
-## SaaS & Enterprise FP&A Platforms
+## 💼 SaaS & Enterprise FP&A Platforms
 
 The following SaaS and hosted platforms represent the leading commercial FP&A and CPM solutions, ranked in descending order by company valuation/revenue scale:
 
-| Platform | Starting Price | Free Tier / Free Trial Limits | Company Scale (Valuation / Revenue) | Description |
+| Platform | Starting Price 🏷️ | Free Tier / Free Trial Limits ⏱️ | Company Scale (Valuation / Revenue) 🏛️ | Description 📝 |
 | :--- | :--- | :--- | :--- | :--- |
 | **[Workday Financial Planning](https://www.workday.com/)** | ~$25,000–$36,000/year (pilot/entry tier; mid-market ~$80k–$300k/yr) | 30-day free trial (guided evaluation of core planning, dashboards & financial reporting) | ~$52B Market Cap / ~$9.55B Annual Revenue | Enterprise-grade cloud planning suite (formerly Adaptive Planning) integrating budgeting, forecasting, and workforce modeling with core ERP/HCM actuals. |
 | **[Anaplan](https://www.anaplan.com/)** | ~$30,000–$50,000/year (departmental entry; enterprise contracts $150k–$1M+/yr) | No commercial free tier; 90-day learning sandbox available via Anaplan Talent Builder program | $10.7B Acquisition Valuation (Thoma Bravo) / ~$600M+ ARR | Connected planning engine featuring hyperblock in-memory multidimensional modeling, complex driver scenario analysis, and cross-functional operational planning. |
@@ -55,11 +70,11 @@ The following SaaS and hosted platforms represent the leading commercial FP&A an
 
 ---
 
-## Open-Source GitHub Projects
+## 💻 Open-Source GitHub Projects
 
 Open-source financial planning & analysis tools provide code-first flexibility, local data governance, and customizable analytics pipelines. The repositories below are sorted in descending order by GitHub stargazers count:
 
-| Repository | GitHub Stars | Primary Stack | Key Capabilities & Architecture |
+| Repository 📂 | GitHub Stars ⭐ | Primary Stack 🛠️ | Key Capabilities & Architecture ⚙️ |
 | :--- | :--- | :--- | :--- |
 | **[Dolibarr ERP (Budget Module)](https://github.com/Dolibarr/dolibarr)** | [![Stars](https://img.shields.io/github/stars/Dolibarr/dolibarr?style=social&color=white)](https://github.com/Dolibarr/dolibarr/stargazers) | PHP / MariaDB | Comprehensive open-source ERP/CRM suite featuring native budgeting and financial forecasting modules, hierarchical account grouping, and real-time budget-vs-actual variance tracking from invoices. |
 | **[jimlindstrom/FinModeling](https://github.com/jimlindstrom/FinModeling)** | [![Stars](https://img.shields.io/github/stars/jimlindstrom/FinModeling?style=social&color=white)](https://github.com/jimlindstrom/FinModeling/stargazers) | Python / Jupyter | Modular financial modeling toolkit for corporate finance analysts, featuring cash flow models, capital budgeting evaluations, and automated multi-scenario forecasting routines. |
@@ -81,19 +96,19 @@ Open-source financial planning & analysis tools provide code-first flexibility, 
 
 ---
 
-## Key Features of Modern FP&A Software
+## ✨ Key Features of Modern FP&A Software
 
-1. **Driver-Based Financial Modeling:** Move away from hardcoded figures to variable drivers (e.g., website visitors $\times$ conversion rate $\times$ ACV = ARR) to forecast P&L, balance sheets, and cash flow dynamically.
-2. **Rolling Forecasts & Scenario Analysis:** Rapidly toggle between Best Case, Base Case, and Downside recessionary scenarios to assess runway, liquidity, and hiring pace.
-3. **Automated Budget vs. Actual (BvA) Variance Analysis:** Directly ingest General Ledger (GL) actuals from your ERP at month-end close and rank variances by absolute value and percentage deviation.
-4. **Excel and Google Sheets Bi-directional Sync:** Preserve the speed and flexibility of spreadsheets while maintaining centralized database governance, row-level access control, and complete audit history.
-5. **AI-Powered Narrative Variance Commentary:** Automatically transform numerical variances into human-readable board presentation commentary and executive summaries.
+1. 🎯 **Driver-Based Financial Modeling:** Move away from hardcoded figures to variable drivers (e.g., website visitors $\times$ conversion rate $\times$ ACV = ARR) to forecast P&L, balance sheets, and cash flow dynamically.
+2. 🔄 **Rolling Forecasts & Scenario Analysis:** Rapidly toggle between Best Case, Base Case, and Downside recessionary scenarios to assess runway, liquidity, and hiring pace.
+3. ⚖️ **Automated Budget vs. Actual (BvA) Variance Analysis:** Directly ingest General Ledger (GL) actuals from your ERP at month-end close and rank variances by absolute value and percentage deviation.
+4. 📊 **Excel and Google Sheets Bi-directional Sync:** Preserve the speed and flexibility of spreadsheets while maintaining centralized database governance, row-level access control, and complete audit history.
+5. 🤖 **AI-Powered Narrative Variance Commentary:** Automatically transform numerical variances into human-readable board presentation commentary and executive summaries.
 
 ---
 
-## How to Contribute
+## 🤝 How to Contribute
 
-Contributions to this ecosystem list are very welcome!
+Contributions to this ecosystem list are very welcome! 🌟
 
 1. Fork this repository.
 2. Create a new branch: `git checkout -b add-fpa-tool`.
@@ -103,12 +118,34 @@ Contributions to this ecosystem list are very welcome!
 
 ---
 
-## Disclaimer & License
+## 💖 Support
 
-- This list is community-curated for informational and educational purposes only and does not constitute financial, investment, or legal advice.
-- Financial Planning & Analysis systems handling sensitive corporate ledgers, confidential payrolls, and material non-public forecasts must comply with SOC 1 / SOC 2 standards, internal corporate controls, and data governance policies.
-- Open-source tools are distributed under their respective licenses (MIT, AGPL, Apache 2.0).
+Thank you for exploring and supporting this curated Financial Planning & Analysis resource! 🙏 
+
+If you found this repository helpful, please consider:
+- ⭐ **Starring** the repository on GitHub
+- 🍴 **Forking** it to keep a copy or contribute improvements
+- 📢 **Sharing** it with fellow FP&A analysts, finance business partners, and engineering teams
+- ☕ **Buying a coffee** or sponsoring future updates via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007)
 
 ---
 
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Financial-Planning-Analysis-FP-A&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Financial-Planning-Analysis-FP-A&type=date&legend=top-left)
+
+---
+
+## ⚖️ Disclaimer & License
+
+- ℹ️ This list is community-curated for informational and educational purposes only and does not constitute financial, investment, or legal advice.
+- 🔒 Financial Planning & Analysis systems handling sensitive corporate ledgers, confidential payrolls, and material non-public forecasts must comply with SOC 1 / SOC 2 standards, internal corporate controls, and data governance policies.
+- 📜 Open-source tools are distributed under their respective licenses (MIT, AGPL, Apache 2.0).
+
+---
+
+<div align="center">
+
 **Made with ❤️ for FP&A Analysts, Finance Business Partners, CFOs, and Strategic Finance Leaders.**
+
+</div>
