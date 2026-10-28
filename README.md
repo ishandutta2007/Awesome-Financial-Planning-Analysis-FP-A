@@ -74,7 +74,7 @@ The following SaaS and hosted platforms represent the leading commercial FP&A an
 
 Open-source financial planning & analysis tools provide code-first flexibility, local data governance, and customizable analytics pipelines. The repositories below are sorted in descending order by GitHub stargazers count:
 
-| Repository 📂 | GitHub Stars ⭐ | Primary Stack 🛠️ | Key Capabilities & Architecture ⚙️ |
+| Repository 📂 | GitHub_Stars ⭐ | Primary Stack 🛠️ | Key Capabilities & Architecture ⚙️ |
 | :--- | :--- | :--- | :--- |
 | **[Dolibarr ERP (Budget Module)](https://github.com/Dolibarr/dolibarr)** | [![Stars](https://img.shields.io/github/stars/Dolibarr/dolibarr?style=social&color=white)](https://github.com/Dolibarr/dolibarr/stargazers) | PHP / MariaDB | Comprehensive open-source ERP/CRM suite featuring native budgeting and financial forecasting modules, hierarchical account grouping, and real-time budget-vs-actual variance tracking from invoices. |
 | **[jimlindstrom/FinModeling](https://github.com/jimlindstrom/FinModeling)** | [![Stars](https://img.shields.io/github/stars/jimlindstrom/FinModeling?style=social&color=white)](https://github.com/jimlindstrom/FinModeling/stargazers) | Python / Jupyter | Modular financial modeling toolkit for corporate finance analysts, featuring cash flow models, capital budgeting evaluations, and automated multi-scenario forecasting routines. |
@@ -113,7 +113,7 @@ Contributions to this ecosystem list are very welcome! 🌟
 1. Fork this repository.
 2. Create a new branch: `git checkout -b add-fpa-tool`.
 3. Add the SaaS platform or open-source GitHub repository following the existing table formatting.
-4. Ensure descriptions are objective, verified, and include transparent starting pricing or GitHub star badges.
+4. Ensure descriptions are objective, verified, and include transparent starting pricing or GitHub Stars_Badges.
 5. Submit a Pull Request with a clear description of the project.
 
 ---
