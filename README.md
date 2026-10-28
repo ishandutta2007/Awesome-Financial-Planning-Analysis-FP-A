@@ -113,7 +113,7 @@ Contributions to this ecosystem list are very welcome! 🌟
 1. Fork this repository.
 2. Create a new branch: `git checkout -b add-fpa-tool`.
 3. Add the SaaS platform or open-source GitHub repository following the existing table formatting.
-4. Ensure descriptions are objective, verified, and include transparent starting pricing or GitHub Stars_Badges.
+4. Ensure descriptions are objective, verified, and include transparent starting pricing or GitHub_Stars_Badges.
 5. Submit a Pull Request with a clear description of the project.
 
 ---
