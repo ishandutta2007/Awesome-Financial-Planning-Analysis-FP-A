@@ -1,202 +1,211 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#0b0f19;border-radius:12px;overflow:hidden;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
   <defs>
-    <!-- Background Linear Gradient -->
-    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090d16" />
-      <stop offset="50%" stop-color="#0e1726" />
-      <stop offset="100%" stop-color="#050811" />
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060c18"/>
+      <stop offset="50%" stop-color="#0c1628"/>
+      <stop offset="100%" stop-color="#050a14"/>
     </linearGradient>
 
-    <!-- Gradient Accents -->
-    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#10b981" />
-      <stop offset="50%" stop-color="#06b6d4" />
-      <stop offset="100%" stop-color="#3b82f6" />
+    <!-- Accent Gradients -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
     </linearGradient>
 
-    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#10b981" stop-opacity="0.35" />
-      <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
     </linearGradient>
 
     <linearGradient id="barGrad1" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#10b981" stop-opacity="0.8" />
+      <stop offset="0%" stop-color="#064e3b" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0.95"/>
     </linearGradient>
 
     <linearGradient id="barGrad2" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.8" />
+      <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.95"/>
     </linearGradient>
 
-    <!-- Grid Pattern -->
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1f293d" stroke-width="0.8" stroke-opacity="0.4" />
+    <!-- Standard Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="hubGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Financial Grid Pattern -->
+    <pattern id="fpaGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#38bdf8" stroke-width="0.5" stroke-opacity="0.1"/>
+      <circle cx="0" cy="0" r="1" fill="#10b981" fill-opacity="0.25"/>
     </pattern>
 
+    <!-- Animations -->
     <style>
-      .title-text {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        font-weight: 800;
-        letter-spacing: -0.5px;
-      }
-      .sub-text {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        font-weight: 400;
-        letter-spacing: 0.2px;
-      }
-      .badge-text {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        font-weight: 600;
-        font-size: 13px;
-      }
-
-      /* Subtle CSS Animation Waves & Pulse */
       @keyframes pulseGlow {
-        0%, 100% { opacity: 0.35; transform: scale(1); }
-        50% { opacity: 0.65; transform: scale(1.08); }
+        0%, 100% { filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.5)); opacity: 0.9; }
+        50% { filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.85)); opacity: 1; }
       }
-      @keyframes floatChart {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-7px); }
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
       }
-      @keyframes dashAnim {
-        to { stroke-dashoffset: -200; }
+      @keyframes scanLine {
+        0% { transform: translateY(0px); opacity: 0.2; }
+        50% { opacity: 0.8; }
+        100% { transform: translateY(240px); opacity: 0.2; }
       }
-      @keyframes barGrow1 {
-        0%, 100% { height: 90px; y: 200px; }
-        50% { height: 115px; y: 175px; }
+      @keyframes circuitDash {
+        0% { stroke-dashoffset: 200; }
+        100% { stroke-dashoffset: 0; }
       }
-      @keyframes barGrow2 {
-        0%, 100% { height: 130px; y: 160px; }
-        50% { height: 155px; y: 135px; }
-      }
-      @keyframes barGrow3 {
-        0%, 100% { height: 180px; y: 110px; }
-        50% { height: 210px; y: 80px; }
-      }
-      @keyframes barGrow4 {
-        0%, 100% { height: 140px; y: 150px; }
-        50% { height: 120px; y: 170px; }
-      }
-      @keyframes pillFloat1 {
+      @keyframes floatNode {
         0%, 100% { transform: translateY(0px); }
         50% { transform: translateY(-5px); }
       }
-      @keyframes pillFloat2 {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(5px); }
+      @keyframes beaconRing {
+        0% { r: 10px; opacity: 0.8; stroke-width: 2px; }
+        100% { r: 45px; opacity: 0; stroke-width: 0.5px; }
       }
-
-      .pulse-orb {
-        animation: pulseGlow 6s ease-in-out infinite;
-        transform-origin: 950px 140px;
+      @keyframes barGrow1 {
+        0%, 100% { height: 45px; y: 65px; }
+        50% { height: 60px; y: 50px; }
       }
-      .moving-chart {
-        animation: floatChart 7s ease-in-out infinite;
+      @keyframes barGrow2 {
+        0%, 100% { height: 65px; y: 45px; }
+        50% { height: 80px; y: 30px; }
       }
-      .chart-line {
-        stroke-dasharray: 6 4;
-        animation: dashAnim 15s linear infinite;
+      @keyframes barGrow3 {
+        0%, 100% { height: 85px; y: 25px; }
+        50% { height: 95px; y: 15px; }
       }
-      .bar-1 { animation: barGrow1 5s ease-in-out infinite; }
-      .bar-2 { animation: barGrow2 6s ease-in-out infinite; }
-      .bar-3 { animation: barGrow3 4.5s ease-in-out infinite; }
-      .bar-4 { animation: barGrow4 7s ease-in-out infinite; }
-      .pill-1 { animation: pillFloat1 4s ease-in-out infinite; }
-      .pill-2 { animation: pillFloat2 4.5s ease-in-out infinite; }
+      .pulse-hub { animation: pulseGlow 4s infinite ease-in-out; }
+      .scanner { animation: scanLine 5s infinite linear; }
+      .circuit-line { stroke-dasharray: 8, 8; animation: circuitDash 8s infinite linear; }
+      .radar-sweep { transform-origin: 120px 120px; animation: radarSweep 8s infinite linear; }
+      .floating-node-1 { animation: floatNode 3.5s infinite ease-in-out; }
+      .floating-node-2 { animation: floatNode 4.5s infinite ease-in-out 1s; }
+      .beacon { animation: beaconRing 2.5s infinite cubic-bezier(0.2, 0.8, 0.4, 1); }
+      .bar-anim-1 { animation: barGrow1 4.5s ease-in-out infinite; }
+      .bar-anim-2 { animation: barGrow2 5.5s ease-in-out infinite; }
+      .bar-anim-3 { animation: barGrow3 4s ease-in-out infinite; }
+      .title-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: 800; }
+      .sub-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; font-weight: 500; }
     </style>
   </defs>
 
-  <!-- Background Layer -->
-  <rect width="1200" height="360" fill="url(#bgGradient)" />
-  <rect width="1200" height="360" fill="url(#grid)" />
+  <!-- Background -->
+  <rect width="900" height="240" fill="url(#bgGrad)" rx="16"/>
+  <rect width="900" height="240" fill="url(#fpaGrid)" rx="16"/>
 
-  <!-- Dynamic Ambient Glowing Orbs in Background -->
-  <circle class="pulse-orb" cx="960" cy="150" r="140" fill="#10b981" filter="blur(70px)" opacity="0.3" />
-  <circle class="pulse-orb" cx="1100" cy="240" r="120" fill="#3b82f6" filter="blur(65px)" opacity="0.25" />
-  <circle cx="200" cy="80" r="100" fill="#06b6d4" filter="blur(75px)" opacity="0.15" />
+  <!-- Scanning Financial Beam -->
+  <rect class="scanner" x="0" y="0" width="900" height="2" fill="url(#scanGrad)" opacity="0.6"/>
 
-  <!-- DYNAMIC BACKGROUND FP&A METRIC VISUALIZATIONS (Right Side) -->
-  <g class="moving-chart" opacity="0.85">
-    <!-- Graph Background Grid Plate -->
-    <rect x="760" y="60" width="390" height="240" rx="14" fill="#0f172a" fill-opacity="0.75" stroke="#1e293b" stroke-width="1.5" />
+  <!-- Circuit & Trend Connections -->
+  <path class="circuit-line" d="M 120 120 L 210 120 L 240 80 L 320 80" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.4"/>
+  <path class="circuit-line" d="M 120 120 L 195 170 L 300 170" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.4"/>
+  <path class="circuit-line" d="M 860 60 L 790 60 L 760 95 L 700 95" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.3"/>
+  <path class="circuit-line" d="M 870 185 L 810 185 L 780 150 L 710 150" fill="none" stroke="#38bdf8" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Left Interactive Financial Radar & EPM Vault Hub -->
+  <g transform="translate(15, 0)">
+    <!-- Radar concentric rings -->
+    <circle cx="120" cy="120" r="85" fill="none" stroke="#10b981" stroke-width="1" stroke-opacity="0.15" stroke-dasharray="4,4"/>
+    <circle cx="120" cy="120" r="60" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.25"/>
+    <circle cx="120" cy="120" r="35" fill="none" stroke="#818cf8" stroke-width="1" stroke-opacity="0.3"/>
     
-    <!-- Mini Metric Header in Card -->
-    <text x="785" y="92" fill="#94a3b8" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" letter-spacing="1">BUDGET VS ACTUAL VARIANCE</text>
-    <text x="1090" y="93" fill="#10b981" font-family="-apple-system, sans-serif" font-size="13" font-weight="700">+18.4% ▲</text>
-    <line x1="785" y1="104" x2="1120" y2="104" stroke="#334155" stroke-width="1" stroke-dasharray="2 2" />
+    <!-- Radar Pulse Wave -->
+    <circle class="beacon" cx="120" cy="120" r="10" fill="none" stroke="#10b981"/>
 
-    <!-- Dynamic Animated Chart Bars -->
-    <rect class="bar-1" x="805" y="200" width="28" height="90" rx="4" fill="url(#barGrad1)" />
-    <rect class="bar-2" x="855" y="160" width="28" height="130" rx="4" fill="url(#barGrad2)" />
-    <rect class="bar-4" x="905" y="150" width="28" height="140" rx="4" fill="url(#barGrad1)" />
-    <rect class="bar-3" x="955" y="110" width="28" height="180" rx="4" fill="url(#barGrad2)" />
-    <rect class="bar-2" x="1005" y="140" width="28" height="150" rx="4" fill="url(#barGrad1)" />
-    <rect class="bar-3" x="1055" y="95" width="28" height="195" rx="4" fill="url(#emeraldGrad)" />
-
-    <!-- Trend Line / Forecast Projection Curve -->
-    <path class="chart-line" d="M 819 195 Q 869 150 919 140 T 1019 110 T 1070 85" fill="none" stroke="#38bdf8" stroke-width="3" />
-    <circle cx="1070" cy="85" r="5" fill="#38bdf8">
-      <animate attributeName="r" values="4;7;4" dur="2s" repeatCount="indefinite" />
-    </circle>
-  </g>
-
-  <!-- Dynamic Floating Decorative Tags/Pills (Stay cleanly on the right, non-overlapping) -->
-  <g class="pill-1">
-    <rect x="740" y="38" width="135" height="30" rx="15" fill="#1e293b" stroke="#10b981" stroke-width="1.2" />
-    <circle cx="755" cy="53" r="4" fill="#10b981" />
-    <text x="768" y="58" fill="#e2e8f0" class="badge-text">📊 Rolling Forecast</text>
-  </g>
-
-  <g class="pill-2">
-    <rect x="1010" y="285" width="150" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
-    <circle cx="1025" cy="301" r="4" fill="#38bdf8" />
-    <text x="1038" y="306" fill="#e2e8f0" class="badge-text">⚡ Driver Modeling</text>
-  </g>
-
-  <!-- PRIMARY TITLE AND SUBTITLE (FOREGROUND - Crisp, clear, left-aligned) -->
-  <g transform="translate(60, 0)">
-    <!-- Category Mini-Kicker -->
-    <g transform="translate(0, 75)">
-      <rect x="0" y="0" width="235" height="28" rx="6" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1" />
-      <text x="12" y="19" fill="#10b981" class="badge-text" letter-spacing="1">ENTERPRISE EPM &amp; FP&amp;A ECOSYSTEM</text>
+    <!-- Radar Rotating Scan Cone -->
+    <g class="radar-sweep">
+      <path d="M 120 120 L 205 120 A 85 85 0 0 0 120 35 Z" fill="url(#emeraldGrad)" opacity="0.12"/>
+      <line x1="120" y1="120" x2="205" y2="120" stroke="#10b981" stroke-width="1.5" opacity="0.6"/>
     </g>
 
-    <!-- Main Title (Gradient Foreground Accent) -->
-    <text class="title-text" x="0" y="160" font-size="44" fill="#ffffff">
-      Awesome <tspan fill="url(#emeraldGrad)">FP&amp;A</tspan> Software
+    <!-- Center EPM Symbol / Financial Emblem -->
+    <g class="pulse-hub" transform="translate(88, 85) scale(1.4)">
+      <!-- Outer Hex/Shield Badge -->
+      <path d="M 23 2 L 6 10 C 6 23 13 33 23 38 C 33 33 40 23 40 10 L 23 2 Z" fill="url(#emeraldGrad)" filter="url(#hubGlow)" opacity="0.95"/>
+      <!-- Inner Dark Plate -->
+      <path d="M 23 5 L 9 12 C 9 22 15 30 23 34.5 C 31 30 37 22 37 12 L 23 5 Z" fill="#060c18" opacity="0.8"/>
+      <!-- Growth / Upward Metric Symbol -->
+      <path d="M 15 25 L 20 19 L 24 22 L 31 13 M 27 13 L 31 13 L 31 17" fill="none" stroke="#34d399" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Central Title, Description & Foreground Elements -->
+  <g transform="translate(255, 0)">
+    <!-- Top Floating Kicker Badge -->
+    <g class="floating-node-1" transform="translate(0, 32)">
+      <rect x="0" y="0" width="230" height="24" rx="12" fill="#064e3b" stroke="#10b981" stroke-width="1" opacity="0.9"/>
+      <circle cx="12" cy="12" r="4" fill="#34d399"/>
+      <text x="24" y="16" fill="#a7f3d0" font-size="11" class="sub-text" letter-spacing="1">ENTERPRISE FP&amp;A ECOSYSTEM</text>
+    </g>
+
+    <!-- Primary Title (Clean foreground gradient) -->
+    <text x="0" y="98" fill="url(#textGrad)" font-size="31" class="title-text" letter-spacing="0.5">
+      Awesome FP&amp;A Software
     </text>
 
     <!-- Subtitle -->
-    <text class="sub-text" x="0" y="202" font-size="20" fill="#cbd5e1">
+    <text x="0" y="132" fill="#f1f5f9" font-size="14.5" class="sub-text">
       Financial Planning &amp; Analysis • CPM / EPM • Driver-Based Modeling
     </text>
 
-    <!-- Sub-bullet Features -->
-    <text class="sub-text" x="0" y="238" font-size="14.5" fill="#94a3b8">
-      Curated directory of SaaS category leaders, modern spreadsheet engines,
-    </text>
-    <text class="sub-text" x="0" y="260" font-size="14.5" fill="#94a3b8">
-      and open-source Python, Excel, and AI-native budgeting &amp; variance tools.
-    </text>
+    <!-- Feature Pillars / Category Badges -->
+    <g transform="translate(0, 162)">
+      <!-- Pill 1: Budgeting -->
+      <rect x="0" y="0" width="130" height="26" rx="6" fill="#0c1628" stroke="#10b981" stroke-width="1" stroke-opacity="0.6"/>
+      <text x="65" y="17" fill="#a7f3d0" font-size="11" text-anchor="middle" class="sub-text">📊 Budgeting</text>
 
-    <!-- Bottom Highlights / Tags -->
-    <g transform="translate(0, 288)">
-      <rect x="0" y="0" width="125" height="26" rx="5" fill="#1e293b" />
-      <text x="14" y="17" fill="#64748b" class="badge-text">📈 Budgeting</text>
+      <!-- Pill 2: Rolling Forecasts -->
+      <rect x="140" y="0" width="150" height="26" rx="6" fill="#0c1628" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.6"/>
+      <text x="215" y="17" fill="#bae6fd" font-size="11" text-anchor="middle" class="sub-text">🔮 Rolling Forecasts</text>
 
-      <rect x="135" y="0" width="135" height="26" rx="5" fill="#1e293b" />
-      <text x="149" y="17" fill="#64748b" class="badge-text">🔮 Forecasting</text>
+      <!-- Pill 3: Variance Analysis -->
+      <rect x="300" y="0" width="155" height="26" rx="6" fill="#0c1628" stroke="#3b82f6" stroke-width="1" stroke-opacity="0.6"/>
+      <text x="377" y="17" fill="#c7d2fe" font-size="11" text-anchor="middle" class="sub-text">⚖️ Variance Analysis</text>
 
-      <rect x="280" y="0" width="165" height="26" rx="5" fill="#1e293b" />
-      <text x="294" y="17" fill="#64748b" class="badge-text">⚖️ Variance Analysis</text>
-
-      <rect x="455" y="0" width="150" height="26" rx="5" fill="#1e293b" />
-      <text x="469" y="17" fill="#64748b" class="badge-text">📋 Board Reports</text>
+      <!-- Pill 4: SaaS & Open Source -->
+      <rect x="465" y="0" width="150" height="26" rx="6" fill="#0c1628" stroke="#818cf8" stroke-width="1" stroke-opacity="0.6"/>
+      <text x="540" y="17" fill="#e0e7ff" font-size="11" text-anchor="middle" class="sub-text">🌐 SaaS &amp; Open Source</text>
     </g>
   </g>
 
-  <!-- Subtle Bottom Edge Highlight Line -->
-  <rect x="0" y="357" width="1200" height="3" fill="url(#emeraldGrad)" />
+  <!-- Right Side Interactive Mini-Chart & Metrics Widget -->
+  <g class="floating-node-2" transform="translate(745, 55)">
+    <!-- Widget Frame -->
+    <rect x="0" y="0" width="125" height="120" rx="10" fill="#08101e" stroke="#1e293b" stroke-width="1.2" opacity="0.95"/>
+    <text x="12" y="20" fill="#94a3b8" font-size="9" font-family="-apple-system, sans-serif" font-weight="700" letter-spacing="0.5">BvA TREND</text>
+    <text x="82" y="20" fill="#10b981" font-size="10" font-family="-apple-system, sans-serif" font-weight="700">+18%</text>
+    <line x1="12" y1="26" x2="112" y2="26" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Animated Mini Financial Bars -->
+    <rect class="bar-anim-1" x="18" y="65" width="15" height="45" rx="3" fill="url(#barGrad1)"/>
+    <rect class="bar-anim-2" x="42" y="45" width="15" height="65" rx="3" fill="url(#barGrad2)"/>
+    <rect class="bar-anim-1" x="66" y="55" width="15" height="55" rx="3" fill="url(#barGrad1)"/>
+    <rect class="bar-anim-3" x="90" y="25" width="15" height="85" rx="3" fill="url(#emeraldGrad)"/>
+
+    <!-- Baseline -->
+    <line x1="14" y1="110" x2="114" y2="110" stroke="#334155" stroke-width="1.5"/>
+  </g>
+
+  <!-- Outer Frame Gradient Border -->
+  <rect x="1" y="1" width="898" height="238" fill="none" stroke="url(#textGrad)" stroke-width="1.5" rx="15" opacity="0.4"/>
 </svg>

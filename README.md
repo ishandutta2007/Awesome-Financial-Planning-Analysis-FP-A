@@ -1,6 +1,6 @@
-<div align="center">
-
-<img src="./assets/banner.svg" alt="Awesome Financial Planning & Analysis (FP&A) Banner" width="100%" />
+<p align="center">
+  <img src="./assets/banner.svg" alt="Awesome Financial Planning & Analysis (FP&A) Banner" width="100%">
+</p>
 
 # 📊 Awesome Financial Planning & Analysis (FP&A) 📈
 
